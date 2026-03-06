@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+  overflow-x: hidden;
+  background-color: #121212;
+  color: white;
+}
+
+.section{
+  height: 300vh;
+  position: relative;
+  background: #121212;
+}
+
+.track{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d1d1d;
+}
+
+.road{
+  width: 100vw;
+  height: 200px;
+  background-color: #1e1e1e;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.car{
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.trail{
+  height: 200px;
+  background: #45db7d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 0;
+  opacity: 0.5;
+  box-shadow: 0 0 18px 6px rgba(69,219,125,0.6), 0 0 40px 10px rgba(69,219,125,0.25);
+}
+
+.text-box{
+  opacity: 0;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem;
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#box1{
+  background: #def54f;
+  color: #111;
+  font-size: 18px;
+  padding: 30px 30px;
+  top: 60px;
+  left: 5%;
+  transform: translateX(-80px);
+}
+
+#box2{
+  background: #6ac9ff;
+  color: #111;
+  padding: 30px 30px;
+  top: 60px;
+  right: 5%;
+  transform: translateX(80px);
+}
+
+#box3{
+  background: #333;
+  color: #fff;
+  padding: 30px 30px;
+  bottom: 220px;
+  left: 5%;
+  transform: translateX(-80px);
+}
+
+#box4{
+  background: #ff7a7a;
+  color: #111;
+  padding: 30px 30px;
+  bottom: 220px;
+  right: 5%;
+  transform: translateX(80px);
+}
+
+.letter{
+  font-size: 8rem;
+  font-weight: bold;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  z-index: 5;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.value-letter{
+  color: #fff;
+  opacity: 0;
+}
+
+.road{
+  width: 100vw;
+  height: 200px;
+  background-color: #1e1e1e;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.road::after{
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 200px;
+  background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, transparent 40%, transparent 60%, rgba(0,0,0,0.55) 100%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.text-box h2{
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+}
